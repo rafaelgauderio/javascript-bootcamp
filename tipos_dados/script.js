@@ -45,3 +45,9 @@ console.log(typeof i);
 
 console.log(j);
 console.log(typeof j);
+
+/* var, let, const
+* var = não é mais recomendado o uso, pois vaza o escopo em estutura de contrato
+* let = usar quando realmente houver necessidade de alterar a variável
+* const mais usado para variáveis constantes
+*/
