@@ -48,4 +48,17 @@ let mamiferos = ["Balaia", "Morcego"];
 let animais = peixes.concat(mamiferos);
 console.log(animais);
 
+console.log("\nImprimindo elementos do array com for:");
+for(let i=0; i < fruits.length ; i++) {
+  console.log("Fruta: " + fruits[i]);
+}
+
+console.log("\nImprimindo array com laço forEach");
+fruits.forEach( argumento => {
+  console.log(`Fruta:  ${argumento}`);
+});
+
+
+
+
 
