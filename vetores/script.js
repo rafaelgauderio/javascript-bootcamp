@@ -59,6 +59,33 @@ fruits.forEach( argumento => {
 });
 
 
+console.log("\nManeiras diferentes de instanciar arrays");
+let tamanho = 10;
+const usuarios = new Array(tamanho);
+for(let i=0; i < tamanho ; i++) {
+  usuarios[i] ={
+    Id:i+1, nome: `Usuario ${i+1}`
+  }
+}
+console.log(usuarios);
 
+console.log("\nVetor de valor constantes")
+const vetor = new Array(12).fill('value');
+console.log(vetor);
 
+for(i=0 ; i< vetor.length; i++) {
+  console.log(vetor[i]);
+}
 
+console.log("\nUsando map");
+const pessoas = new Array(5).fill(null).map(() =>({nome: "Usuario"})
+);
+pessoas[1].nome= "Usuario diferente";
+console.log(pessoas);
+
+console.log("\nUsando Object.Keys")
+let numeros = Object.keys(new Array(5).fill(null));
+console.log(numeros);
+
+let numeros2 = Object.keys(new Array(10).fill(null).map(Number));
+console.log(numeros2);
