@@ -46,3 +46,23 @@ switch (diaDaSemana) {
     console.log("Informaste um valor inválido");
 }
 
+console.log("\nEstrutuda de controle while");
+let i = 20;
+while (i > 0) {
+    console.log("Valor de i: " + i);
+    i=i-2;
+}
+
+const nome = "Rafael De Luca"
+console.log("\nEstrutuda de controle for");
+for(let i=0 ; i < nome.length; i = i + 0.5) {
+    console.log(`Valor de i: ${i}`)
+}
+
+console.log("\nEstrutura de controle do")
+let idade = Number(35);
+do {
+    console.log(`Idade: ${idade}`);
+    idade--;
+} while (idade >=0);
+
