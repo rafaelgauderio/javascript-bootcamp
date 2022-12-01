@@ -34,5 +34,18 @@ fruits.splice(1,0,"Bergamota");
 console.log("\nImrpimindo após as inserções");
 console.log(fruits);
 
+console.log("\nAcessando elementos pelo índice");
+const nomes = ["Rafael", "Luciana", "Janaina"];
+console.log(nomes[0]);
+console.log(nomes[1]);
+console.log(nomes[2]);
+nomes[3]="Larissa";
+console.log(nomes[3]);
+
+console.log("\nConcatenando 2 arrays");
+let peixes = ["Lambari", "Dourado"];
+let mamiferos = ["Balaia", "Morcego"];
+let animais = peixes.concat(mamiferos);
+console.log(animais);
 
 
