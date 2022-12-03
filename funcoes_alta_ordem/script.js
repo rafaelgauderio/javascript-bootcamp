@@ -83,3 +83,36 @@ console.log(reduce2);
 console.log(reduce3);
 console.log(reduce4);
 console.log(reduce5);
+
+
+console.log("\nsort: ordena uma coleção conforme a função de comparação.");
+console.log("sort altera a coleção original, então o ideal é criar um clone da coleção inicial se não quiser alterada");
+console.log("comparação: resulta 0 se igual, positivo se o primeiro parametro é maior e negativo se primeiro parametro é menor.");
+
+const vetor3 = ["Rafael", "Maria", "Clara", "Antonela", "Marcio", "Ziza", "Juvenal", "Bia"];
+
+function comparacaoTamanho(string1, string2) {
+  return string1.length - string2.length;
+}
+
+console.log("vetor original: " + vetor3);
+
+//gerando clones da coleção para não alterar a original
+
+const sort1 = [...vetor3].sort();
+const sort2 = [...vetor3].sort(comparacaoTamanho);
+const sort3 = [...vetor3].sort((a,b)=> a.length - b.length);
+
+console.log("\nOrdem alfabética");
+console.log(sort1);
+
+console.log("Ordenando por tamanho");
+console.log(sort2);
+
+console.log("Ordenando por tamanho com arrow function");
+console.log(sort3);
+
+console.log("Alterando o vetor orignal")
+console.log(vetor3.sort());
+console.log(vetor3);
+
