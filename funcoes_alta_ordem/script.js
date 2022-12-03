@@ -26,7 +26,7 @@ console.log(map3);
 console.log(map4);
 
 console.log("\nFilter é uma função que retorna uma nova coleção apenas com os elementos que atenderem ao predicado.")
-console.log("\nPredicado: é uma função que retorna true ou false")
+console.log("Predicado: é uma função que retorna true ou false")
 
 function par (valor) {
   if(valor % 2 ==0) {
@@ -55,3 +55,31 @@ console.log(filter2);
 console.log(filter3);
 console.log(filter4);
 console.log(filter5);
+
+
+console.log("\nReduce é uma função que aplica cumulativamente uma função aos elementos de uma coleção e retorna o resultado final acumulado.");
+console.log("No caso de uma coleção vazia é necessário informar o valor inicial para acumualar")
+
+ const vetor2 = [1, 2, 3, 4 ,5];
+ const vetorvazio = [];
+
+function somatorio(x,y) {
+  return x + y;
+}
+
+function produtorio(a,b) {
+  return a * b;
+}
+
+let reduce1 = vetor2.reduce(somatorio);
+let reduce2 = vetor2.reduce(produtorio);
+let reduce3 = vetor2.reduce(somatorio,0);
+let reduce4 = vetor2.reduce(produtorio,1);
+let reduce5 = vetorvazio.reduce(somatorio,0);
+
+console.log("Vetor original: " + vetor2)
+console.log(reduce1);
+console.log(reduce2);
+console.log(reduce3);
+console.log(reduce4);
+console.log(reduce5);
