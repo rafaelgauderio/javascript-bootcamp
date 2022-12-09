@@ -1,5 +1,6 @@
 console.log("\nsetTimeout");
 console.log("É uma função que executa uma função após um dado tempo em milisegundos.");
+console.log("setTimeout faz um espera assíncrona. Ou seja o código segue executando enquanto não der o tempo da função que é chamada como referências no setTimeout");
 console.log("Quando vai passar um função como argumento de função, nãos e usar os parenteses. Apenas uma referências para a função.");
 
 function sayHello () {
