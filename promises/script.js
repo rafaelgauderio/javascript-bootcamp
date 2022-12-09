@@ -2,7 +2,11 @@ console.log("\nPROMISE");
 console.log("É uma função construtora do javaScript");
 console.log("Promises fazem mais sentido quando houver alguma execução ASSÍNCRONA na função f, uma execução que demore a resolver.");
 console.log("Promises são muito uteins para fazer requisições, funções assincronas");
-
+console.log("Promise recebem um função f como argumento e f recebe duas funções g e h como argumento");
+console.log("Se durante a execução da lógica da função f a função g for chamada com o argumento P, então o estado da promisse mudara para FULFILLED (resolvida) e com resultado valor P da promisse");
+console.log("Se durante a execução da lógica da função f a função h for chamada com o argumento Q, então o estado da promisse mudara para REJECTED (rejeitada) e com resultado valor Q da promisse");
+console.log("O método THEN de uma promise recebe como argumento uma função e quando a promise for RESOLVIDA, executa esta função passando o valor P para ela");
+console.log("O método CATCH de uma promise recebe como argumento uma função e quando a promise for REJEITADA, executa esta função passando o valor Q para ela");
 
 // função que resolve a promise
 function f(g,h) {
