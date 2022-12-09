@@ -18,5 +18,6 @@ export function arredondar (valor, casa_decimais) {
     return Math.round(valor * multiplicador)/ multiplicador;
 }
 
-// outra maneira de exportar as funções
+// outra maneira de exportar as funções sem ter que colocar export na frente
+// exportação explícitas
 export {exponencial};
