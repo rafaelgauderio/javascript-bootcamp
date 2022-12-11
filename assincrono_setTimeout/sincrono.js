@@ -1,4 +1,4 @@
-console.log("\nsetTimeout Sincrono");
+console.log("\nEspera Sincrona");
 console.log("NÃO É RECOMENDADO usar de maneira sincrono, pois vai travar as aplicações.");
 console.log("De maneira sincrono a aplicação fica parada até executar o que estiver em s")
 
