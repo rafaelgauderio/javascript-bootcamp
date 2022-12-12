@@ -29,6 +29,7 @@ async function getRespostaDoJson(url) {
 // resolvendo usando .then
 getRespostaDoJson(`https://viacep.com.br/ws/${cep}/json/`)
   .then(resultado => {
+    console.log("Usando promise")
     console.log(resultado);
   });
 
@@ -37,6 +38,7 @@ getRespostaDoJson(`https://viacep.com.br/ws/${cep}/json/`)
 async function imprimirCep(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`;
     const json = await getRespostaDoJson(url);
+    console.log("Usando função await");
     console.log(json);
 }
 
