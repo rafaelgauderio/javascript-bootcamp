@@ -17,3 +17,5 @@ console.log("document represent a estrutura html aberta no navegador");
 console.log("Por ser referenciado por window.document ou document");
 console.log(window.document);
 
+
+
