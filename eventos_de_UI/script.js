@@ -2,7 +2,7 @@ console.log("\nProgramar eventos é escrever funções para serem executadas qua
 
 const inputName = document.forms.formulario.name;
 const inputEmail = document.forms.formulario.email;
-let inputTelefone = document.forms.formulario.telefone;
+const inputTelefone = document.forms.formulario.telefone;
 console.log(inputName);
 console.log(inputEmail);
 
@@ -11,7 +11,7 @@ console.log(inputEmail);
 inputName.addEventListener('keyup',handleInputNameKeyUp);
 
 function handleInputNameKeyUp(event) {
-    console.log(event.target.value);
+    console.log("Nome: " + event.target.value);
 }
 
 inputEmail.addEventListener('change', handleInputEmailChange);
@@ -30,6 +30,21 @@ function handleInputEmailChange(event) {
     
 }
 
+inputTelefone.addEventListener('change',handleInputTelefoneChange);
+
+function handleInputTelefoneChange(event) {
+    if(validarTelefone(event.target.value)) {        
+        event.target.classList.remove("entrada-erro");
+        console.log("Telefone informado é válido");
+        
+        
+    } else {
+        event.target.classList.add("entrada-erro"); 
+        window.alert("telefone inválido");
+    }
+    
+}
+
 // https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript
 function validarEmail(email) {
     // validar email utilizando expressão regular
@@ -38,6 +53,15 @@ function validarEmail(email) {
       .match(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
+  }
+
+  function validarTelefone(telefone) {
+    return String(telefone)
+    .toLowerCase()
+    .match(
+       /^(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})$/     
+    );
+
   }
 
   //const botaoEnviar = document.forms.formulario.btn;
