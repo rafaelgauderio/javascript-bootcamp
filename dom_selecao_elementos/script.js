@@ -48,6 +48,16 @@ Array.from(cartaoPorClassName).map(cadaItem => {
 });
 
 
+console.log("\nUsando DataShet para selecionar");
+const selecionarData = document.querySelector('[data-produto-id="17');
+console.log(selecionarData);
+console.log(selecionarData.dataset);
+
+
+const selecionarData2 = document.querySelector('[data-preco="20.50');
+console.log(selecionarData2);
+console.log(selecionarData2.dataset);
+
 
 
 
