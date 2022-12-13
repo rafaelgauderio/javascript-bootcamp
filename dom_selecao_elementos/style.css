@@ -29,6 +29,17 @@ body {
     border: 2px black solid;
 }
 
+#ultimoCartao {
+    display: block;    
+    text-align: center;
+    align-items: center;
+    line-height: 50px;
+}
+
+h3 {
+    display: block;
+}
+
 ul, li {
     list-style-type: none;
     padding: 10px;
@@ -40,7 +51,14 @@ h1 {
     text-align: center;
 }
 
-.border {
-    border: 5px blueviolet solid;
+.borda-verde {
+    border: 5px green solid;
 }
 
+.borda-vermelha {
+    border: 5px red solid;
+}
+
+.borda-violeta {
+    border: 5px violet solid;
+}
