@@ -74,5 +74,3 @@ function validarEmail(email) {
     console.log("Dados do formulário\n" + inputName.value + "\n" + inputEmail.value + "\n"+ inputTelefone.value);
   }
 
-
-

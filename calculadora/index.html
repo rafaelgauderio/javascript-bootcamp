@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora em JavaScript</title>
+        <style>
+            #calculator-card {
+                width: 400px;
+                height: 400px;
+                border: 1px solid black;
+                border-radius: 10px;
+                background-color: bisque;
+                display: flex;
+                flex-direction: column;
+                margin: 20px auto;
+                padding: 10px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #calculator-card input {
+                height: 40px;
+                width: 100px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            #calculator-card h2 {
+                font-family: Arial;
+                font-size: 30px;
+            }
+
+            #calculator-card h3 {
+                font-family: Arial;
+                font-size: 25px;
+                border-radius: 10px;
+                border: 1px solid black;
+                padding: 10px;
+                background-color: white;
+            }
+
+            #calculator-card button {
+                height: 40px;
+                width: 40px;
+                margin-bottom: 10px;
+            }
+
+            .button-card {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .button-card button {
+                margin: 0 15px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="calculator-card">
+            <h2>Calculator</h2>
+            <input id="number01"/>
+            <input id="number02"/>
+            <div class="button-card">
+                <button onclick="sum()">+</button>
+                <button onclick="decrease()">-</button>
+            </div>
+            <div class="button-card">
+                <button onclick="multiply()">*</button>
+                <button onclick="divide()">/</button>
+            </div>
+            <h3 id="result">Resultado</h3>
+        </body>
+
+        <script>
+
+            function sum() {
+                let n1 = + document.getElementById("number01").value;
+                let n2 = + document.getElementById("number02").value;
+                let result = (n1 + n2).toFixed(2);
+                let resultInput = document.getElementById("result");
+                resultInput.innerHTML = result;
+
+                // var final = document.createElement('input');
+                // final.innerHTML = result;
+                // final.value = result;
+                // document.body.append(final);
+
+            }
+
+            function decrease() {
+                let n1 = + document.getElementById("number01").value;
+                let n2 = + document.getElementById("number02").value;
+                let result = (n1 - n2).toFixed(2);
+                let resultInput = document.getElementById("result");
+                resultInput.innerHTML = result;
+            }
+
+            function multiply() {
+                let n1 = + document.getElementById("number01").value;
+                let n2 = + document.getElementById("number02").value;
+                let result = (n1 * n2).toFixed(2);
+                let resultInput = document.getElementById("result");
+                resultInput.innerHTML = result;
+
+            }
+
+            function divide() {
+                let n1 = + document.getElementById("number01").value;
+                let n2 = + document.getElementById("number02").value;
+                let result = (n1 / n2).toFixed(2);
+                if (n2 === 0) {
+                    alert("Não é possível divisão por zero")
+                } else {
+
+                    let resultInput = document.getElementById("result");
+                    resultInput.innerHTML = result;
+                }
+            }
+        </script>
+    </body>
+</html>
